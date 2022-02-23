@@ -30,12 +30,14 @@ The Quantifiers in this regex are the `+` operator, which connects the users ema
 The character class in the expression is `/d`, which matches a single character and the digit ranges from 0-9. 
 
 ### Grouping and Capturing
+In this expression capturing group #1 is `([a-z0-9_\.-]+)` this matches the users email name. Capturing group #2 is `([\da-z\.-]+)` this matches the email service that is used. The 3rd capturing group is `([a-z\.]{2,6})` it captures the .com of the email address. 
 
 
 ### Bracket Expressions
+In bracket expressions for validating emails the charcter sets include `[a-z0-9_\.-]`, It matches any letter a-z also being case senstive. Also matches a character between 0-9 and characters such as "_", "-" and ".". `[\da-z\.-]`, matches a single digit from 0-9, any character from a-z. Then the characters "." & "-", `[a-z\.]`.
 
 ### Greedy and Lazy Match
+In this regex it has greedy matches since there is a `+` quantifier it matches as many times as possible. Another greedy quantifier used is `{}` when matching `{2,6}` for the last capture group.
 
 ## Author
-
 My projects can be viewed at https://github.com/Dapr1nc3 
